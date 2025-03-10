@@ -159,15 +159,30 @@ for (const l of letters) {
   print(l);
 }
 
-// Class
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-}
+// Set
+let setty = new Set(['a', 'b', 'c']);
+setty.add('d');
+setty.has('a');
+setty.forEach((value) => {
+  print(value);
+});
 
-const myCar1 = new Car('Ford', 2014);
+//Map
+const fruits = new Map([
+  ['apple', 500],
+  ['banana', 400],
+  ['cherry', 600],
+]);
+fruits.set('orange', 300);
+fruits.get('apple');
+fruits.delete('banana');
+fruits.has('cherry');
+fruits.forEach((value, key) => {
+  print(key + ' ' + value);
+});
+for (const [key, value] of fruits) {
+  print(key + ' ' + value);
+}
 
 // Export
 function eFunction() {
